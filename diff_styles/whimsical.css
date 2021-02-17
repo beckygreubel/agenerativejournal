@@ -1,0 +1,87 @@
+/* playfully quaint or fanciful, especially in an appealing and amusing way. */
+
+@font-face{
+    font-family: Ogg-Medium;
+    src: url(media/fonts/Ogg-Regular.woff);
+}
+
+@font-face{
+    font-family: Ogg-RegularItalic;
+    src: url(media/fonts/Ogg-RegularItalic.woff);
+}
+
+@font-face{
+    font-family: Ogg-MediumItalic;
+    src: url(media/fonts/Ogg-MediumItalic.woff);
+}
+
+@font-face{
+    font-family: PangramRegular;
+    src: url(media/fonts/Pangram-Regular.otf);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'PangramRegular', sans-serif;
+    font-size: 12px;
+    background-color: #F0FFFF;
+}
+.header{
+    margin: 40px;
+    font-family: 'PangramRegular', serif;
+}
+.postContainer{
+    margin: 20px;
+    position: relative;
+}
+
+.post{
+    width: 400px;
+    margin: 40px;
+    transition: transform 1s;
+}
+
+.postTitle{
+    font-family: 'Ogg-Medium', serif;
+    font-size: 20px;
+}
+
+.timestamp{
+    font-family: 'Ogg-RegularItalic', serif;
+    font-size: 10px;
+}
+
+.postText, ul{
+    margin-left: 60px;
+    line-height: 20px;
+}
+
+#post1{
+    transform: rotate(10deg);
+}
+
+#post2{
+    margin-left: 40vw;
+    transform: rotate(-18deg);
+}
+
+#post3{
+    margin: 40px;
+    transform: rotate(5deg);
+}
+
+.post:hover{
+    transform: rotate(0deg);
+}
+
+@media screen and (max-width: 750px) {
+    .post{
+        width: 70vw;
+    }
+
+    #post2{
+        margin-left: 40px;
+        transform: rotate(-3deg);
+    }
+}

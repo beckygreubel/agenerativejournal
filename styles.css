@@ -1,0 +1,129 @@
+/* playfully quaint or fanciful, especially in an appealing and amusing way. */
+
+@font-face{
+    font-family: Ogg-Medium;
+    src: url(media/fonts/Ogg-Regular.woff);
+}
+
+@font-face{
+    font-family: Ogg-RegularItalic;
+    src: url(media/fonts/Ogg-RegularItalic.woff);
+}
+
+@font-face{
+    font-family: Ogg-MediumItalic;
+    src: url(media/fonts/Ogg-MediumItalic.woff);
+}
+
+@font-face{
+    font-family: PangramRegular;
+    src: url(media/fonts/Pangram-Regular.otf);
+}
+
+::selection{
+    background: black;
+    color: white;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'PangramRegular', sans-serif;
+    font-size: 12px;
+    background-color: #F0FFFF;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#myCanvas{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+#garden{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .flower{
+    position: absolute;
+    opacity: .7;
+    transition: opacity 2s;
+  }
+
+.header{
+    margin: 40px;
+    font-family: 'PangramRegular', serif;
+    text-align: right;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.postContainer{
+    margin: 20px;
+    position: relative;
+    padding: 40px;
+}
+
+.post{
+    width: 400px;
+    margin: 40px;
+    transition: transform 1s;
+}
+
+.postTitle{
+    font-family: 'Ogg-Medium', serif;
+    font-size: 20px;
+}
+
+.timestamp{
+    font-family: 'Ogg-RegularItalic', serif;
+    font-size: 10px;
+}
+
+.postText, ul{
+    line-height: 20px;
+}
+
+#post1{
+    transform: rotate(10deg);
+}
+
+#post2{
+    transform: rotate(-18deg);
+}
+
+#post3{
+    margin: 40px;
+    transform: rotate(5deg);
+}
+
+#post4{
+    transform: rotate(-10deg);
+}
+
+.post:hover{
+    transform: rotate(0deg);
+}
+
+@media screen and (max-width: 750px) {
+    .postContainer{
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding: 0;
+    }
+    .post{
+        width: 80vw;
+    }
+
+    #post2{
+        transform: rotate(-3deg);
+    }
+}

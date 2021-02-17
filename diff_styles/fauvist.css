@@ -1,0 +1,89 @@
+/* whose works emphasized painterly qualities and strong color 
+over the representational or realistic values retained by Impressionism.  */
+
+:root {
+    --mainPurple: #551660;
+    --mainYellow: #DFD342;
+    --mainRed: #D63D14;
+    --mainGreen: #1D950A;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--mainPurple);
+}
+
+.overallContainer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-left: calc(50vw - 150px);
+}
+
+.post{
+    width: 300px;
+    color: var(--mainYellow);
+}
+
+a {
+    color: var(--mainGreen);
+}
+
+.postTitle{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.postText, ul, .timestamp{
+    font-family: monospace;
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.shapes{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+
+#shape1{
+    transform: rotate(30deg);
+    background-color: var(--mainRed);
+    clip-path: polygon(15% 0, 67% 37%, 100% 100%, 0% 100%);
+}
+
+#shape2{
+    left: 300px;
+    top: 500px;
+    transform: rotate(30deg);
+    background-color: var(--mainGreen);
+    clip-path: polygon(85% 13%, 23% 21%, 100% 100%, 22% 71%);
+}
+
+#shape3{
+    bottom: 0px;
+    transform: rotate(30deg);
+    background-color: var(--mainRed);
+    clip-path: polygon(9% 18%, 73% 50%, 60% 81%, 90% 44%);
+}
+
+#shape4{
+    right: 0px;
+    bottom: 100px;
+    transform: rotate(30deg);
+    background-color: var(--mainGreen);
+    clip-path: polygon(15% 3%, 0 68%, 60% 100%, 100% 13%);
+}
+
+#shape5{
+    right: 25px;
+    top: 50px;
+    transform: rotate(30deg);
+    background-color: var(--mainRed);
+    clip-path: polygon(100% 0, 0 68%, 78% 94%, 50% 59%);
+}

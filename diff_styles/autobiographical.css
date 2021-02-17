@@ -1,0 +1,44 @@
+/* (of a written work) dealing with the writer's own life. */
+
+@font-face{
+    font-family: PanamaRegular;
+    src: url(media/fonts/PanamaRegular.woff);
+}
+
+body{
+    background-color: #FFFEEB;
+    font-family: 'PanamaRegular', serif;
+    padding: 0;
+    margin: 0;
+}
+
+.postContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 200vw;
+}
+
+.post{
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    height: calc(80vh - 40px);
+}
+
+.postTitle{
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    color: #326016;
+}
+
+.postText{
+    font-size: 14px;
+}
+
+.timestamp{
+    font-size: 10px;
+}
