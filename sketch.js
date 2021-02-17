@@ -30,10 +30,8 @@ let minChangeG = -1;
 let minChangeB = -1;
 
 function setup() {
-    if (windowWidth < 800){
-        let canvas = createCanvas(windowWidth, windowHeight);
-        canvas.parent('myCanvas');
-    }
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('myCanvas');
   
   colorMode(RGB);
   
