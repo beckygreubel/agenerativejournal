@@ -1,4 +1,5 @@
 let theBody = document.getElementsByTagName('body')[0];
+let posts = document.getElementsByClassName('post');
 
 theBody.onmousemove = function(e){
     let garden = document.getElementById('garden');
@@ -22,8 +23,17 @@ theBody.onmousemove = function(e){
     garden.appendChild(flower);
     setTimeout(function(){
         flower.style.opacity = 0;
-    }, 5000);
+    }, 2500);
     setTimeout(function(){
         garden.removeChild(flower);
-    }, 6000);
+    }, 3500);
 }
+
+// posts.forEach(function(post){
+//     post.onmouseover = function(){
+//         post.classList.add('noRotate');
+//     };
+//     post.onmouseleave = function(){
+//         post.classList.remove('noRotate');
+//     };
+// })
