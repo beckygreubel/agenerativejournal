@@ -1,0 +1,42 @@
+img {
+    width: 3in;
+}
+
+.spread{
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    font-weight: normal;
+  }
+  
+  body {
+    height: auto;
+    width: 100%;
+    line-height: 1.2;
+    font-family: Times;
+    color: white;
+  }
+
+  .📖-flow-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .📖-page {
+    background: black !important;
+  }
+
+.📖-right img{
+      margin-top: 30px;
+  }
+
+.📖-left img{
+    margin-left: 70px;
+}
+
+.📖-right .spread, .📖-left .spread{
+    margin: 0;
+}

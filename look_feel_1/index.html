@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Option 1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="sketch.js"></script> -->
+  </head>
+  <body>
+    <div id="header">
+      <div class="headerButton" id="print">
+        <h3>print chapbook</h3>
+      </div>
+      <div class="headerButton" id="about">
+        <h3>about</h3>
+      </div>
+    </div>
+
+    <div id="options">
+      <h2>What noun or adjective inspires you today?</h2>
+      <input type="text" id="word" name="word"><br><br>
+      <h2>How many poems?</h2>
+      <input type="range" min ="1" max="20" value="1" class="slider" id="numPoems">
+      <div id="displayNum">1</div>
+      <div class="headerButton" id="button"><h3>generate poetry</h3></div>
+    </div>
+
+    <div id="content">
+      <div id="firstPage">
+          <h1 id="chosenWord"></h1>
+          <h3 id="time"></h3>
+      </div>
+    </div>
+    <script src='paper-full.min.js'></script>
+    <script src='script.js'></script>
+  </body>
+</html>
