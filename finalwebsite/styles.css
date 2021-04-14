@@ -1,0 +1,108 @@
+@font-face{
+    font-family: GT America;
+    src: url(media/fonts/GT-America-Mono-Regular.woff);
+}
+
+@font-face{
+    font-family: Ogg;
+    src: url(media/fonts/Ogg-Regular.woff)
+}
+
+:root{
+    --bgColor: #B9BEBD;
+    --accent1: #CCA43B;
+    --accent2: #0C090D;
+    --font1: 'Ogg', Times, serif;
+    --font2: 'GT America', Courier, monospace;
+}
+
+body, html{
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bgColor);
+    font-family: var(--font2);
+    color: var(--accent2);
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: block;
+    width: 60vw;
+    margin-top: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li{
+	font-size: 1rem;
+    font-weight: normal;
+    display: inline-block;
+}
+
+#meta-data{
+    float: right;
+    font-size: .6rem;
+}
+
+.input{
+    margin: 12rem 0 .5rem 0;
+}
+
+.input-content{
+    width: 100%;
+	text-align: center;
+    padding: .5rem;
+    border: none;
+    border-bottom: 2px solid var(--accent1);
+    background-color: var(--bgColor);
+    outline: none;
+    font-size: 2rem;
+    font-family: var(--font2);
+}
+
+a{
+    color: var(--accent2);
+    text-decoration: none;
+}
+
+button{
+    border: 2px solid var(--accent1);
+    background-color: var(--accent1);
+    color: var(--bgColor);
+    font-family: var(--font2);
+    font-size: 1rem;
+    outline: none;
+}
+
+button:hover{
+    background-color: var(--bgColor);
+    color: var(--accent2);
+}
+
+.cursor {
+    position: relative;
+}
+.cursor i {
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    background-color: var(--accent2);
+    left: 51.5%;
+    top: 10%;
+    animation: blink 1s infinite;
+    opacity: 1;
+}
+
+.cursor input:focus + i {
+    display: none;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

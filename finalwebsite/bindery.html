@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quote Synonyms</title>
+<!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div id="content">
+
+    </div>
+
+    <script src="https://unpkg.com/rita"></script>
+    <script src="poetry.js"></script>
+    <script src="bindery.min.js"></script>
+    <script defer>
+      let pageColorRule = Bindery.createRule({
+          eachPage: function(page, book) {
+          if (page.number == 1) {
+              page.background.style.backgroundColor = "#7741AF"
+        }
+          if (page.number % 3 == 0){
+              page.background.style.backgroundColor = "#F7F6DC"
+          }
+      }
+  });
+  
+      // let imageBorderRule = Bindery.createRule({
+      //     selector: 'img',
+      //     counter: 0,
+      //     beforeAdd: function(element, page) =>{
+      //         this.counter += 1;
+      //         if (counter % 2 == 0){
+      //             element.style.borderColor = "#D2FF0A"
+      //         }
+      //     }
+      // });
+  
+        Bindery.makeBook({
+          content: '#content',
+          view: Bindery.View.FLIPBOOK,
+          pageSetup: {
+              size: {
+                  width: '4in', height: '6in'
+              },
+              margin: {
+                  top: '12pt', inner: '0pt', outer: '0pt', bottom: '12pt'
+              },
+          },
+          
+          rules: [
+              pageColorRule,
+              // imageBorderRule,
+              Bindery.FullBleedSpread({
+                  selector: '.spread',
+                  continue: 'left',
+              }),
+              Bindery.PageBreak({
+                  selector: '.break',
+              }),
+              Bindery.PageBreak({
+                  selector: '#frontPage',
+                  position: 'after'
+              })
+          ]
+        }); 
+    </script>
+</body>
+</html>
