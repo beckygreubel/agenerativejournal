@@ -1,14 +1,56 @@
 var paramsString = window.location; // get the current url
 var searchParams = new URLSearchParams(paramsString.search); // get the search parameters from the url
 var input = searchParams.get('input');
+var numPoems = 10;
+
+let photos = ['img1.jpeg', 
+    'img2.jpeg', 
+    'img3.jpeg', 
+    'img4.jpeg', 
+    'img5.jpeg', 
+    'img6.jpeg', 
+    'img7.jpeg', 
+    'img8.jpeg', 
+    'img9.jpeg', 
+    'img10.jpeg', 
+    'img11.jpeg', 
+    'img12.jpeg', 
+    'img13.jpeg'];
 
 let last_b;
 let synonyms;
 let verbs = [];
 last_a = input.toString();
+
 findSynonyms(last_a).then(function(){
-        createVillanelle();
+    for (let i = 0; i < numPoems; i++){
+            let poem = createVillanelle();
+            let photo = addPhoto();
+
+            let img = document.createElement('img');
+            img.src = photo;
+            if (i % 3){
+                img.classList.add('spread');
+            }
+
+            let div = document.createElement('div');
+            div.classList.add('poem');
+            div.innerHTML = poem;
+
+            document.getElementById('content').appendChild(img);
+            document.getElementById('content').appendChild(div);
+        }
 });
+
+function addPhoto(){
+
+    let randomPhoto = Math.floor(Math.random() * photos.length);
+    let chosenPhoto = photos[randomPhoto];
+    let photo = 'media/images/' + chosenPhoto;
+    photos.splice(randomPhoto, 1);
+    return photo;
+
+}
 
 function createVillanelle(){
     let A1 = createLine('a')
@@ -36,7 +78,7 @@ function createVillanelle(){
     ${A1}<br>
     ${A2}`
 
-    document.getElementById('content').innerHTML = villanelle;
+    return villanelle;
     
 };
 

@@ -28,12 +28,3 @@ theBody.onmousemove = function(e){
         garden.removeChild(flower);
     }, 3500);
 }
-
-// posts.forEach(function(post){
-//     post.onmouseover = function(){
-//         post.classList.add('noRotate');
-//     };
-//     post.onmouseleave = function(){
-//         post.classList.remove('noRotate');
-//     };
-// })
