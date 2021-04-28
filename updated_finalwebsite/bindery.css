@@ -1,0 +1,74 @@
+@font-face{
+  font-family: Wremena;
+  font-weight: normal;
+  src: url(media/fonts/WremenaRegular.woff);
+}
+
+:root{
+    --bgColor: #B9BEBD;
+    --accent1: #CCA43B;
+    --accent2: #0C090D;
+    --mainFont: "Wremena", serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--mainFont);
+}
+
+img {
+    width: 3in;
+    filter: invert(80%);
+}
+
+.spread{
+    width: 100%;
+    height: 100%;
+}
+
+.📖-flow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.📖-right .spread, .📖-left .spread{
+    margin: 0;
+}
+
+/* updating the bindery interface */
+
+@media only screen {
+
+    .📖-zoom-scaler,  .📖-root{
+        background: var(--bgColor) !important;
+       }
+  
+    .📖-page {
+      background: var(--accent1) !important;
+    }
+  
+    .📖-controls,
+    .📖-view-print.📖-controls {
+      background: var(--bgColor) !important;
+      font-family: var(--mainFont) !important;
+    }
+  
+    .📖-controls .📖-select, .📖-control {
+      color: var(--accent2) !important;
+      font-family: var(--mainFont) !important;
+    }
+  
+    .📖-controls button {
+      background: var(--accent1) !important;
+      color: var(--accent2) !important;
+      font-family: var(--mainFont) !important;
+    }
+  
+    .📖-page {
+      background: pink;
+    }
+  
+  }
