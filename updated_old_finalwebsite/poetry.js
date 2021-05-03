@@ -24,8 +24,6 @@ let verbs = [];
 last_a = input.toString();
 
 findSynonyms(last_a).then(function(){
-
-    todaysDate();
     for (let i = 0; i < numPoems; i++){
             let poem = createVillanelle();
             let photo = addPhoto();
@@ -34,8 +32,6 @@ findSynonyms(last_a).then(function(){
             img.src = photo;
             if (i % 3){
                 img.classList.add('spread');
-            } else {
-                img.classList.add('break');
             }
 
             let div = document.createElement('div');
@@ -58,7 +54,9 @@ findSynonyms(last_a).then(function(){
               
               if (page.number == 1) {
                   page.background.style.backgroundColor = colors[randomColor].coverColor;
-            } else {
+            } else if (page.number % 6 == 0){
+                  page.background.style.backgroundColor = colors[randomColor].accentColor;
+              } else {
                   page.background.style.backgroundColor = colors[randomColor].innerColor;
               }
           }
@@ -72,7 +70,7 @@ findSynonyms(last_a).then(function(){
                       width: '4in', height: '6in'
                   },
                   margin: {
-                      top: '48pt', inner: '12pt', outer: '12pt', bottom: '12pt'
+                      top: '24pt', inner: '12pt', outer: '12pt', bottom: '12pt'
                   },
               },
               
@@ -83,7 +81,7 @@ findSynonyms(last_a).then(function(){
                       selector: '.spread',
                       continue: 'left',
                   }),
-                  Bindery.FullBleedPage({
+                  Bindery.PageBreak({
                       selector: '.break',
                   }),
                   Bindery.PageBreak({
@@ -95,10 +93,7 @@ findSynonyms(last_a).then(function(){
                         ? `${pageInfo.number} ${pageInfo.heading.h1}`
                         : `${pageInfo.number}`
                   }),
-                    Bindery.PageBreak({ 
-                        selector: '#backPage', 
-                        position: 'before', 
-                        continue: 'left' }),
+                    Bindery.PageBreak({ selector: '#backPage', position: 'before' }),
               ]
             }); 
             document.getElementById('loading').style.opacity = 0;
@@ -255,8 +250,3 @@ function lineByPOS(){
     return linesPOS[randomPOS];
 }
 
-function todaysDate(){
-    var today = new Date();
-
-    document.getElementById("meta-data").innerHTML = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-}
