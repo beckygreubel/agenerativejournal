@@ -375,7 +375,7 @@ function lineByPOS(){
     'in this world, the shapes that I',
     'want to manifest',
     'and take up space in these shapes',
-    'that have rigids and soft',
+    'that have rigid and soft',
     'edges - rigid and soft',
     'around the edges was',
     'how I hoped to be and yet',

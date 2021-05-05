@@ -101,7 +101,7 @@ body{
 }
 
 #post2{
-    transform: rotate(-18deg);
+    transform: rotate(-15deg);
 }
 
 #post3{
@@ -143,6 +143,12 @@ body{
 
 #post11{
     transform: rotate(-10deg);
+}
+#post12{
+    transform: rotate(10deg);
+}
+#post13{
+    transform: rotate(-1deg);
 }
 
 .noRotate{
