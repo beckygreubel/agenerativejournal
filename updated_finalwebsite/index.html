@@ -2,11 +2,20 @@
 <html>
 <head>
 <title>A generative chapbooks</title>
+<meta charset="UTF-8">
+<meta name="description" content="Create your own poetry chapbook with generatively made poetry">
+<meta name="keywords" content="Poetry, Chapbook, Generative">
+<meta name="author" content="Becky Greubel">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <div class="mobile">
-        <h3>Enjoy poetry on your desktop</h3>
+        <h3>This website is best enjoyed on your desktop</h3>
     </div>
     <div class="main">
         <div id="title">
@@ -23,7 +32,16 @@
         </div>
         <button id="submit">WRITE CHAPBOOK</button>
         <footer>
-            <button id="about">ABOUT</button>
+            <button id="accordian">ABOUT</button>
+            <div id="panel">This website was created by Becky Greubel as part of the Spring 2021
+                course Currents: A-Generative-Web, taught by John Provenchor. By entering a word 
+                above, poems based off of poetry written by Becky from 2004-2021 will be generated. <br><br>
+                The poetry is created using RiTa.js and the Wordnik API, recreating lines using their 
+                parts of speech, and finding synonyms and like words to your entry. The chapbook is then 
+                presented using Bindery.js, and can be printed to have a physical chapbook of the poetry. <br><br>
+                Colophon:<br>
+                Typecase is Wremena by <a href="https://typefaces.temporarystate.net/preview/Wremena">The Temporary State</a>
+            </div>
         </footer>
     </div>
 </div>

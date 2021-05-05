@@ -99,6 +99,19 @@ button:hover{
     color: var(--accent2);
 }
 
+#panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 60%;
+    
+  }
+
+.open{
+    padding: 10px;
+    border: 2px solid var(--accent1);
+}
+
 .cursor {
     position: relative;
 }
